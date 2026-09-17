@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/64pPP55uAGjrmdHfMsz/dA7o3MY</id>
+  <title>arXiv Query: search_query=&amp;id_list=2507.06229,2605.11032,2608.10502,2608.01619,2608.19652,2608.29606,2607.04089&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-17T12:41:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2507.06229,2605.11032,2608.10502,2608.01619,2608.19652,2608.29606,2607.04089" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>7</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2507.06229v5</id>
+    <title>Agent KB: Leveraging Cross-Domain Experience for Agentic Problem Solving</title>
+    <updated>2025-10-27T06:16:14Z</updated>
+    <link href="https://arxiv.org/abs/2507.06229v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.06229v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI agent frameworks operate in isolation, forcing agents to rediscover solutions and repeat mistakes across different systems. Despite valuable problem-solving experiences accumulated by frameworks like smolagents, OpenHands, and OWL, this knowledge remains trapped within individual systems, preventing the emergence of collective intelligence. Current memory systems focus on individual agents or framework-specific demonstrations, failing to enable cross-architecture knowledge transfer. We introduce AGENT KB, a universal memory infrastructure enabling seamless experience sharing across heterogeneous agent frameworks without retraining. AGENT KB aggregates trajectories into a structured knowledge base and serves lightweight APIs. At inference time, hybrid retrieval operates through two stages: planning seeds agents with cross-domain workflows, while feedback applies targeted diagnostic fixes. A disagreement gate ensures retrieved knowledge enhances rather than disrupts reasoning, addressing knowledge interference in cross-framework transfer. We validate AGENT KB across major frameworks on GAIA, Humanity's Last Exam, GPQA, and SWE-bench. Results show substantial improvements across diverse model families: compared to baseline pass@1, smolagents with AGENT KB achieve up to 18.7pp gains at pass@3 (55.2% -&gt; 73.9%), while OpenHands improves 4.0pp on SWE-bench pass@1 (24.3% -&gt; 28.3%). Similar improvements are observed across all base model families. Ablations confirm that hybrid retrieval and feedback stages are essential, with automatically generated experiences matching manual curation. This establishes the foundation for collective agent intelligence through shared memory infrastructures.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-08T17:59:22Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Xiangru Tang</name>
+    </author>
+    <author>
+      <name>Tianrui Qin</name>
+    </author>
+    <author>
+      <name>Tianhao Peng</name>
+    </author>
+    <author>
+      <name>Ziyang Zhou</name>
+    </author>
+    <author>
+      <name>Daniel Shao</name>
+    </author>
+    <author>
+      <name>Tingting Du</name>
+    </author>
+    <author>
+      <name>Xinming Wei</name>
+    </author>
+    <author>
+      <name>Peng Xia</name>
+    </author>
+    <author>
+      <name>Fang Wu</name>
+    </author>
+    <author>
+      <name>He Zhu</name>
+    </author>
+    <author>
+      <name>Ge Zhang</name>
+    </author>
+    <author>
+      <name>Jiaheng Liu</name>
+    </author>
+    <author>
+      <name>Xingyao Wang</name>
+    </author>
+    <author>
+      <name>Sirui Hong</name>
+    </author>
+    <author>
+      <name>Chenglin Wu</name>
+    </author>
+    <author>
+      <name>Hao Cheng</name>
+    </author>
+    <author>
+      <name>Chi Wang</name>
+    </author>
+    <author>
+      <name>Wangchunshu Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.11032v1</id>
+    <title>Portable Agent Memory: A Protocol for Cryptographically-Verified Memory Transfer Across Heterogeneous AI Agents</title>
+    <updated>2026-05-10T23:24:06Z</updated>
+    <link href="https://arxiv.org/abs/2605.11032v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.11032v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present Portable Agent Memory, an open protocol and reference implementation for transferring persistent memory state across heterogeneous AI agents. Modern AI agents accumulate rich context -- episodic events,semantic knowledge, procedural skills, working state, and identity preferences -- but this context remains locked within vendor-specific runtimes. Portable Agent Memory addresses this through: (1) a five-component structured memory model with content-addressable entries linked by a Merkle-DAG provenance graph providing tamper-evidence; (2) capability-based access control enabling selective, scoped disclosure of memory segments; (3) an injection-resistant rehydration protocol that adapts recalled content to heterogeneous target models while mitigating indirect prompt injection; and (4) a JSON-first serialization format with optional CBOR compaction for efficient transport. We provide a Python SDK with 54 passing tests, agent skills for multiple platforms, and demonstrate cross-model memory transfer between GPT-4, Claude, Gemini, and Llama architectures. The protocol is open-source under Apache 2.0.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-10T23:24:06Z</published>
+    <arxiv:comment>8 pages, 28 references</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Santhosh Kumar Ravindran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.04089v1</id>
+    <title>PLACEMEM: Toward a Compute-Aware Memory Plane for Lifelong Agents</title>
+    <updated>2026-07-05T02:55:10Z</updated>
+    <link href="https://arxiv.org/abs/2607.04089v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.04089v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lifelong agents need more than larger context windows and better retrieval. They need memories that can persist, evolve, and be corrected without forcing the serving stack to recompute the same history on every turn or silently reuse stale runtime state. We present PLACEMEM as a systems position on lifelong-agent memory, instantiated by an executable control-plane prototype. The central claim is that agent memory should be represented as versioned capsules that unify semantics, provenance, validity, and reusable runtime state under one correction-aware identity. In the current prototype, capsules drive prompt-level text retrieval, KV-aware routing, and cascading invalidation over live streamed backends; prospective layer-frontier replay is intentionally framed as a deeper integration agenda rather than a claimed engine feature. We describe a vLLM-first prototype with persistent capsule state, concurrency-safe invalidation, an OpenAI-compatible routing sidecar, a typed metadata contract, and a benchmark harness that measures live first-token latency, reuse, and post-correction behavior. The result is both an executable artifact that demonstrates correction-aware control-plane behavior today and a concrete roadmap for replay-aware serving integration in future lifelong-agent systems.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-05T02:55:10Z</published>
+    <arxiv:comment>6 pages, 3 Tables,. 1 Figure</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Sukanta Ganguly</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.19652v1</id>
+    <title>Can Agent Memory Systems Track Evolving State?</title>
+    <updated>2026-08-20T05:41:23Z</updated>
+    <link href="https://arxiv.org/abs/2608.19652v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.19652v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As LLM-based agents are deployed for longer and higher-stakes tasks, their memory systems continue to have crucial gaps. While existing memory benchmarks focus largely on recall-shaped tasks, we argue an effective memory system must track the evolving state of the world; as facts, constraints, and decisions are revised over a long interaction, answers must reflect the current state and not a superseded one. We define this capability as state tracking and instantiate it in StateMemBench, a benchmark of 234 multi-session scenarios spanning two conversation-length regimes. Its closed-pool grading scores whether an answer reflects the current state, the superseded state, or fails otherwise, separating state-tracking failures from other errors by construction. Our analysis shows that this task is challenging for existing memory systems, retrieval-augmented baselines, and long-context baselines. We then present StateMem, a state-first memory method that explicitly tracks supersession and relational dependencies, and show it improves current-state accuracy over the strongest same-backbone baseline by 1.8x (0.205 -&gt; 0.363) on DeepSeek-V4-Flash and over the strongest memory system by 1.6x (0.149 -&gt; 0.233) on Qwen-3.5-9B, while remaining competitive with the long-context baselines. Finally, we show the same state approach can be applied as a lightweight single-call wrapper over existing memory systems, lifting current-state accuracy by +32 to +67 points on StateMemBench across six memory and retrieval backends. A length- and cost-matched control attributes +15 to +32 of those points to state structure rather than added context.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-20T05:41:23Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Xinyi Fan</name>
+    </author>
+    <author>
+      <name>Miri Liu</name>
+    </author>
+    <author>
+      <name>Ruozhen Yang</name>
+    </author>
+    <author>
+      <name>Siru Ouyang</name>
+    </author>
+    <author>
+      <name>Jiawei Han</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.29606v1</id>
+    <title>Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents</title>
+    <updated>2026-08-30T06:55:59Z</updated>
+    <link href="https://arxiv.org/abs/2608.29606v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.29606v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM) agents need durable, faithful memory of everything a user or organization has said and stored, yet most memory systems commit to a single organizing structure (a fact store, a vector index, or a knowledge graph) and inherit its blind spots. We present Agent Zero Memory, a provenance-aware long-term memory system that distils a user's conversations, files, and connected sources into three parallel memory systems, each capturing a different facet of the same history: an episodic Memory Events timeline that makes when and what changed first-class, an associative entity-event knowledge graph that links people and projects across sessions, and a semantic, curated, citation-locked Hierarchical Documentary Memory (HDM) of durable facts. A retrieval turn runs an intent gate (so self-contained turns add no latency), a source router, and three concurrent agentic searches, one per system, each a tool-using loop over hybrid (embedding + lexical) search under agent-controlled filters; their grounded, cited answers are integrated into one answer with a single confidence. We formalize the reading discipline: every learned item is a provenanced item carrying its origin, timestamp, and evidence pointer, and every answer is read under a citation lock, so it may cite only evidence its reader actually opened; fabrication is structurally excluded and the system abstains rather than guesses. On two public benchmarks the system sets a new state of the art: 95.60% on LongMemEval and 93.60% on LoCoMo, improving over the strongest prior systems by +0.73 and +1.10 points. A controlled study across eight backbone LLMs characterizes the accuracy-cost-latency frontier: accuracy varies by only 3.4 points while per-query cost varies by ~30x, with near-state-of-the-art quality at up to 20x lower cost per query, the signature of memory-driven, rather than model-driven, quality.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-30T06:55:59Z</published>
+    <arxiv:comment>10 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Ming Wu</name>
+    </author>
+    <author>
+      <name>Pengyuan Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.10502v1</id>
+    <title>From Faulty Memories to Corrected Actions: Dependency-Guided Rollback Repair for Memory-Augmented Agents</title>
+    <updated>2026-08-11T05:19:55Z</updated>
+    <link href="https://arxiv.org/abs/2608.10502v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.10502v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Persistent memory lets language-model agents reuse information across sessions, but it also makes errors durable: a poisoned, stale, or misattributed record can alter reasoning, tool use, answers, and subsequent memory writes. Existing defenses mainly detect or delete suspicious memories, or revise the current response. Deleting the source leaves already propagated claims, actions, and derived memories active, whereas resetting the store or replaying the full trace destroys benign state and repeats unnecessary computation. We therefore formulate \textbf{post-failure memory recovery: } \textit{given a failed execution and diagnosed faulty memories, recover both the answer and persistent state while retaining unaffected work.} Our \textbf{dependency-guided rollback repair} builds a typed memory-to-action graph from runtime provenance, traces explicit downstream dependencies, preserves candidates with independent trusted support, deactivates unsupported memory state, and selectively replays only answer-relevant affected computation. We evaluate this approach on a 150-case controlled benchmark spanning three tool-use domains and four memory failure types, and on a 50-case trajectory-derived stress test adapted from LongMemEval-V2. On the controlled benchmark, it achieves 85.3\% recovery versus 77.3\% for the best competing recovery method, removes all diagnosed faulty memories, preserves all benign memories, and requires only selective replay with modest LLM-call cost. On the adapted subset, it reaches 68.0\% recovery versus 54.0\% for the next best method, while also achieving the highest claim invalidation F1, 0.669 versus 0.603. Overall, the results do not imply uniformly better trace reconstruction, but show that dependency-guided rollback repair provides a strong recovery--cost trade-off while repairing faulty memory state and preserving benign memory.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T05:19:55Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Caili Yu</name>
+    </author>
+    <author>
+      <name>Yiqi Wang</name>
+    </author>
+    <author>
+      <name>Jiaqi Zhang</name>
+    </author>
+    <author>
+      <name>Yiqun Duan</name>
+    </author>
+    <author>
+      <name>Mingkai Zheng</name>
+    </author>
+    <author>
+      <name>Zhangkai Wu</name>
+    </author>
+    <author>
+      <name>Kaize Shi</name>
+    </author>
+    <author>
+      <name>Taotao Cai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.01619v1</id>
+    <title>When Memory Updates but Behavior Does Not: Repairing Implicit Stale Dependencies in Personalized Agent Responses</title>
+    <updated>2026-08-03T02:49:08Z</updated>
+    <link href="https://arxiv.org/abs/2608.01619v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.01619v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Memory-augmented agents can know that a user's stored state is outdated and still plan around the old value. The STALE benchmark calls this the implicit policy adaptation (IPA) gap. We identify one structural contributor: draft-anchored verification checks what a response says, and in an open-ended response the stale dependency is usually unsaid. StateAuditor therefore audits in the opposite direction, from stored state to draft. An LLM proposes candidate old-to-new transitions from timestamped evidence; deterministic code pins each quotation to a single entry, checks that the new evidence really is newer, and lets only these verified transitions trigger repair. What is verified is provenance and chronology - not semantic supersession. On STALE's full protocol (400 scenarios, 50-session histories, one independent response per query), strict single-query VTA scores .736 against .686 for our locked predecessor under the same judge: a +5.0-point paired gain (95% CI [+2.9, +7.2]) coming almost entirely from IPA and premise resistance (PR). The benchmark's own judge, from a third model family, reproduces the gain (.738 vs. .680). On an independent cross-family preference-evolution benchmark (HorizonBench), the full draft-audit-repair pipeline over a gold-derived structured store raises current-preference accuracy (user-clustered p&lt;.01), though a matched control shows most of this external gain is the draft-side audit itself; a harder authored lifecycle set gives no gain, bounding the claim while false invalidation stays controlled. On STALE, by contrast, a matched control (same evidence, adapter, and call budget) scores only .692 (+0.6 over the predecessor, n.s.), attributing the STALE gain to the transition machinery rather than added context or calls. We make no claim about general-purpose agent memory.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T02:49:08Z</published>
+    <arxiv:comment>9 pages, 4 figures; supplementary material in ancillary files</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Haofei Sun</name>
+    </author>
+    <author>
+      <name>Lin He</name>
+    </author>
+  </entry>
+</feed>

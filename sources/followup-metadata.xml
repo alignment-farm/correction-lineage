@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/5sX+EvbKfpIEd6AisA1QDrmeO2g</id>
+  <title>arXiv Query: search_query=&amp;id_list=2605.07242,2608.22533,2607.27773,2608.07169&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-17T12:42:30Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2605.07242,2608.22533,2607.27773,2608.07169" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.07242v1</id>
+    <title>MEMOREPAIR: Barrier-First Cascade Repair in Agentic Memory</title>
+    <updated>2026-05-08T04:57:29Z</updated>
+    <link href="https://arxiv.org/abs/2605.07242v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.07242v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agentic memory evolves across tasks into durable derived artifacts: summaries, cached outputs, embeddings, learned skills, and executable tool procedures. When a source artifact is deleted, corrected, or invalidated by tool or API migration, descendants derived from that source can remain visible and steer future actions with stale support. We formalize this failure mode as the cascade update problem, where repair targets the visible derived state of the memory store. We present MemoRepair, a barrier-first cascade-repair contract for agentic memory. A repair event induces a controlled transition from invalidated descendant state to validated successor state: affected descendants are withdrawn before repair, successors are constructed from retained support and staged repaired predecessors under the current interface, and republication is restricted to validated predecessor-closed successors. This contract induces a scalarized repair-selection problem for a fixed repair-cost tradeoff. We show that the induced publication problem reduces to maximum-weight predecessor closure and can be solved exactly by a single s-t min-cut. Experiments on ToolBench and MemoryArena show that, with complete influence provenance, MemoRepair reduces invalidated-memory exposure from 69.8-94.3% under systems without cascade repair to 0%. Compared with exhaustive Repair all, it recovers 91.1-94.3% of validated successors while reducing normalized repair-operator cost from 1.00 to 0.57-0.76.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T04:57:29Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yang Zhao</name>
+    </author>
+    <author>
+      <name>Chengxiao Dai</name>
+    </author>
+    <author>
+      <name>Mengying Kou</name>
+    </author>
+    <author>
+      <name>Yue Xiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07169v1</id>
+    <title>Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory</title>
+    <updated>2026-08-07T12:43:00Z</updated>
+    <link href="https://arxiv.org/abs/2608.07169v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07169v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Memory systems have shown promise for improving agent performance, but their potential remains largely unexplored for small language models, which struggle to generate sufficient successful trajectories on their own. We propose Agent Memory Distillation (AMD), a training-free framework that transfers structured knowledge from a large teacher agent to a small student agent through hierarchical memory. AMD constructs three complementary memory types from successful teacher trajectories: Workflow memory encodes task-level strategies, Subtask memory provides concrete behavioral examples at an intermediate granularity, and Function memory captures per-function calling conventions and common pitfalls. Workflow and Subtask memories are injected proactively at the start of each task, while Function memory is retrieved reactively upon tool-calling errors. We evaluate AMD on three tool-use benchmarks using four student models (4B-8B parameters) with GPT-5-mini as the teacher, achieving average accuracy gains of 27.2%p, 11.2%p, and 3.4%p on AppWorld, BFCL V3, and ToolSandbox, while consistently outperforming existing memory-based baselines. Further analysis shows that Subtask memory contributes the largest gains, teacher effectiveness depends on both teacher capability and student compatibility, and 4B-sized students benefit most from AMD.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T12:43:00Z</published>
+    <arxiv:comment>Under review</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Taeil Kim</name>
+    </author>
+    <author>
+      <name>Kangsan Kim</name>
+    </author>
+    <author>
+      <name>Sung Ju Hwang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22533v1</id>
+    <title>CONTRAMEM: Learning Self-Evolving Procedural Memory from Contrasting Multi-Model Trajectories</title>
+    <updated>2026-08-23T18:11:26Z</updated>
+    <link href="https://arxiv.org/abs/2608.22533v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22533v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Autonomous computer-use agents are increasingly applied to long-horizon tasks requiring coordinated application calls, persistent state tracking, and verifier-sensitive writes, yet they remain prone to procedural failures: misreading application state, tool semantics, or task progress. Procedural memory promises more consistent decisions and less redundant exploration, but constructing high-quality memory without model training remains challenging. We introduce CONTRAMEM, a source-flexible, training-free framework for self-evolving procedural memory that treats same-task outcome variation as supervision: differences in correctness, efficiency, recovery, and failure modes expose outcome-relevant procedural distinctions, distilled into a compact bank of app-level Function Cards and task-level Skill Cards that evolves through localized curation rather than append-only accumulation or whole-bank rewriting. On held-out GAIA2/ARE computer-use tasks, CONTRAMEM more than doubles the success rate across the three source-model targets (26.2% to 55.3%), with consistent per-model gains (GPT-5.5: 27.5 to 61.0; Claude Sonnet 4.6: 28.0 to 52.5; DeepSeek V4 Pro: 23.0 to 52.5). The same bank transfers unchanged to the unseen Qwen3.7 Plus (18.5 to 35.5), indicating transferable procedural knowledge rather than model-specific behavior. The same construction carries over unchanged to AppWorld, beating both no memory and its own single-source self-memory variant for all three mid-tier agents on both public test splits. Under a matched trajectory budget, heterogeneous multi-model trajectories yield stronger memory than self- or same-model multi-rollout memory: the margin comes from contrastive behavioral diversity, not stronger source agents or more sampling.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-23T18:11:26Z</published>
+    <arxiv:comment>35 pages, 7 figures; includes technical appendix</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Zheyuan Deng</name>
+    </author>
+    <author>
+      <name>Binghang Lu</name>
+    </author>
+    <author>
+      <name>Hanqi Feng</name>
+    </author>
+    <author>
+      <name>Shirley Huang</name>
+    </author>
+    <author>
+      <name>Dianzhuo Wang</name>
+    </author>
+    <author>
+      <name>Yuanda Xu</name>
+    </author>
+    <author>
+      <name>Zhiwei Zhang</name>
+    </author>
+    <author>
+      <name>Yige Sun</name>
+    </author>
+    <author>
+      <name>Changhong Mou</name>
+    </author>
+    <author>
+      <name>Runyu Zhang</name>
+    </author>
+    <author>
+      <name>Yuexing Hao</name>
+    </author>
+    <author>
+      <name>Barnabas Poczos</name>
+    </author>
+    <author>
+      <name>Xiaomin Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.27773v2</id>
+    <title>ChronoMem: Version Control and Semantic Rollback for Large Language Model Agent Memory</title>
+    <updated>2026-08-05T04:27:17Z</updated>
+    <link href="https://arxiv.org/abs/2607.27773v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.27773v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLM agents increasingly rely on long-term memory to support multi-session interaction and personalization. However, existing agent memory systems are designed around forward-only evolution, continuously accumulating, consolidating, and overwriting knowledge, with no principled mechanism to inspect, version, or revert prior states. This makes agents brittle under corrections, concept drift, and memory corruption, particularly after they have already been exposed to subsequent information. We present ChronoMem, a semantic version-control layer for agentic memory integrated into the production-ready, open-source Agent Development Kit by Google. ChronoMem commits whole-memory snapshots at each memory write, maintains structured version histories, and supports natural-language rollback requests by mapping undo intents to concrete historical versions through hybrid lexical and semantic retrieval, rank fusion, and reranking. We further introduce a post-exposure evaluation protocol that tests whether an agent can behave counterfactually after rollback by answering queries and summarizing history as if future updates had never occurred. On long-horizon conversational benchmarks augmented with evolving memory states and rollback tasks, ChronoMem substantially improves rollback-consistent question answering and history summarization relative to prompt-only and retrieval-only baselines, while achieving strong performance in semantic version selection. To our knowledge, ChronoMem is the first open-source system and benchmark for systematic semantic global memory rollback in LLM agents.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-30T07:07:39Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yongye Su</name>
+    </author>
+    <author>
+      <name>Wujiang Xu</name>
+    </author>
+    <author>
+      <name>Chaoji Zuo</name>
+    </author>
+    <author>
+      <name>Elisa Bertino</name>
+    </author>
+  </entry>
+</feed>

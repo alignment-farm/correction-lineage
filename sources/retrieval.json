@@ -1,0 +1,56 @@
+[
+  {
+    "filename": "portability-discovery.xml",
+    "url": "https://export.arxiv.org/api/query?search_query=%28abs%3A%22agent+memory%22+OR+abs%3A%22procedural+memory%22%29+AND+%28abs%3Atransfer+OR+abs%3Amigration+OR+abs%3Acompatibility%29&start=0&max_results=25&sortBy=submittedDate&sortOrder=descending",
+    "retrieved_at": "2026-09-17T12:41:49.282129+00:00",
+    "user_agent": "Construct-2 bounded research selection (https://github.com/alignment-farm/construct-2)",
+    "headers": {
+      "Date": "Thu, 17 Sep 2026 12:41:49 GMT",
+      "Content-Type": "application/atom+xml; charset=utf-8"
+    },
+    "sha256": "7ae6257842fbb3af16b399f673da56e5dee8754b892afccc059961f285521bac"
+  },
+  {
+    "filename": "repair-discovery.xml",
+    "url": "https://export.arxiv.org/api/query?search_query=%28abs%3A%22agent+memory%22+OR+abs%3A%22memory-augmented+agents%22%29+AND+%28abs%3Aprovenance+OR+abs%3Arollback+OR+abs%3Aretraction+OR+abs%3Adependency%29&start=0&max_results=25&sortBy=submittedDate&sortOrder=descending",
+    "retrieved_at": "2026-09-17T12:41:52.939990+00:00",
+    "user_agent": "Construct-2 bounded research selection (https://github.com/alignment-farm/construct-2)",
+    "headers": {
+      "Date": "Thu, 17 Sep 2026 12:41:53 GMT",
+      "Content-Type": "application/atom+xml; charset=utf-8"
+    },
+    "sha256": "edb3851b58938714ffc92b974747a66846a9fa9f4c82881dfff124c8016415b7"
+  },
+  {
+    "filename": "selected-metadata.xml",
+    "url": "https://export.arxiv.org/api/query?id_list=2507.06229%2C2605.11032%2C2608.10502%2C2608.01619%2C2608.19652%2C2608.29606%2C2607.04089",
+    "retrieved_at": "2026-09-17T12:41:56.484930+00:00",
+    "user_agent": "Construct-2 bounded research selection (https://github.com/alignment-farm/construct-2)",
+    "headers": {
+      "Date": "Thu, 17 Sep 2026 12:41:56 GMT",
+      "Content-Type": "application/atom+xml; charset=utf-8"
+    },
+    "sha256": "5dfc5b19c84d91008c8128348d69e7bdd7587b1e7cba6a75e3eef41873eb32b6"
+  },
+  {
+    "filename": "followup-metadata.xml",
+    "url": "https://export.arxiv.org/api/query?id_list=2605.07242,2608.22533,2607.27773,2608.07169",
+    "retrieved_at": "2026-09-17T12:42:30.542713+00:00",
+    "user_agent": "Construct-2 bounded research selection (https://github.com/alignment-farm/construct-2)",
+    "sha256": "44fd76a0846de4d1fdbd7a53a29c593951396d2fccf3d51e7899f6578860d861"
+  },
+  {
+    "filename": "memcollab-metadata.xml",
+    "url": "https://export.arxiv.org/api/query?id_list=2603.23234",
+    "retrieved_at": "2026-09-17T12:44:34.914037+00:00",
+    "user_agent": "Construct-2 bounded research selection (https://github.com/alignment-farm/construct-2)",
+    "sha256": "7a570ea6ba0ee405d5fc69acc7074206739c9ab4413d639d963b6125af29dca9"
+  },
+  {
+    "filename": "upgrade-metadata.xml",
+    "url": "https://export.arxiv.org/api/query?id_list=2609.05339",
+    "retrieved_at": "2026-09-17T12:45:01.265435+00:00",
+    "user_agent": "Construct-2 bounded research selection (https://github.com/alignment-farm/construct-2)",
+    "sha256": "8679a6000dd76c207b9bfb295f153ba31110f0b02e8bc8fac147a8ed3a7f4411"
+  }
+]

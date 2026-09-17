@@ -1,0 +1,46 @@
+{
+  "retrieved_utc": "2026-09-17T13:05:33.927359+00:00",
+  "root_revision": "52f8eaac42fdfc9ef7333c584bea21a25b40e7ac",
+  "artifacts": [
+    {
+      "url": "https://arxiv.org/html/2605.07242v1",
+      "sha256": "40a598867a3e561a0cb6c00fae122dcd311082ac889c621841eefec9894c5570",
+      "bytes": 330905
+    },
+    {
+      "url": "https://arxiv.org/html/2608.10502v1",
+      "sha256": "1cd1325fe2ecdb1fd574d63248fee9daa6310ae5eeb1feca962b5ff2965e074a",
+      "bytes": 401858
+    },
+    {
+      "url": "https://arxiv.org/html/2608.19652v1",
+      "sha256": "30d2978361311bcc48c27cac80deffd758e394b3467d49ca165545b830736366",
+      "bytes": 594650
+    },
+    {
+      "url": "https://arxiv.org/html/2608.01619v1",
+      "sha256": "6d33f17ea6541ee2656727ac276d3e33101b1847b6d2a5932018fcb3592aae75",
+      "bytes": 207687
+    },
+    {
+      "file": "README.md",
+      "copied_from": "../../construct-2/sources/2026-09-17-independent-study-selection/README.md",
+      "sha256": "dbeb64f9c140aaaf5629af0873ac213d3fa2c54dfc2800e27fd054e45e435e72"
+    },
+    {
+      "file": "retrieval.json",
+      "copied_from": "../../construct-2/sources/2026-09-17-independent-study-selection/retrieval.json",
+      "sha256": "86d830ad375da50c85c1d786611688339a4e4dd0e6b2b7dc08e40f98d391aa35"
+    },
+    {
+      "file": "selected-metadata.xml",
+      "copied_from": "../../construct-2/sources/2026-09-17-independent-study-selection/selected-metadata.xml",
+      "sha256": "5dfc5b19c84d91008c8128348d69e7bdd7587b1e7cba6a75e3eef41873eb32b6"
+    },
+    {
+      "file": "followup-metadata.xml",
+      "copied_from": "../../construct-2/sources/2026-09-17-independent-study-selection/followup-metadata.xml",
+      "sha256": "44fd76a0846de4d1fdbd7a53a29c593951396d2fccf3d51e7899f6578860d861"
+    }
+  ]
+}
