@@ -1,0 +1,60 @@
+{
+  "tag": "s101-e1-rebuild-use",
+  "request": {
+    "model": "docker.io/ai/qwen3.8:27b-q4_K_M",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful dispatch clerk in a synthetic sandbox. Use only supplied evidence. Return a single JSON object, no markdown. Do not omit obligations. This is not a real shipment."
+      },
+      {
+        "role": "user",
+        "content": "{\"corrections\":[{\"replace\":\"S1\",\"text\":\"Authoritative replacement of S1: route maple; tariff 11 credits per item; cold transport is not required; account no longer requires escort.\"}],\"current_archive\":{\"S1\":\"Authoritative replacement of S1: route maple; tariff 11 credits per item; cold transport is not required; account no longer requires escort.\",\"S2\":\"Authoritative handling rule: add 3 credits per item to tariff. Standing batch has 6 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 13.\",\"S6\":\"Unapproved suggestion, not a rule: use route maple, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"memory\":{\"batch_cost\":84,\"cold\":false,\"cutoff\":13,\"documents\":[\"manifest\",\"seal\"],\"escort\":true,\"label\":\"fragile\",\"route\":\"maple\",\"unit_cost\":14},\"memory_schema\":\"Build reusable dispatch memory for this account. Keys: route (string), unit_cost (integer: tariff + handling), batch_cost (integer: unit_cost times standing batch size), cold (boolean), escort (boolean: required if either account or site requires it), documents (list of strings), label (string), cutoff (integer hour). Preserve independent support: removing one escort requirement does not remove another. Only authoritative replacements supersede records; a suggestion has no authority.\",\"original_archive\":{\"S1\":\"Authoritative account dispatch contract: route delta; tariff 8 credits per item; cold transport required; account requires escort.\",\"S2\":\"Authoritative handling rule: add 3 credits per item to tariff. Standing batch has 6 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 13.\",\"S6\":\"Unapproved suggestion, not a rule: use route maple, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"quantities\":[7,10],\"task\":\"Audit memory against the authoritative archive, then produce dispatch orders for each new quantity. Each order must have quantity,total_cost,route,cold,escort,documents,label,cutoff. total_cost is quantity times current per-item tariff plus handling (both per item). Return {\\\"orders\\\":[...]}. Preserve every obligation.\"}"
+      }
+    ],
+    "temperature": 0,
+    "max_tokens": 1200,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "request_sha256": "86c3c2db2ee5b72b73e098852c2ef4e418d991f9a7c29f725c0669eb92aa2d6e",
+  "utc": "2026-09-17T13:08:32.117475+00:00",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"orders\": [\n    {\n      \"quantity\": 7,\n      \"total_cost\": 98,\n      \"route\": \"maple\",\n      \"cold\": false,\n      \"escort\": true,\n      \"documents\": [\n        \"manifest\",\n        \"seal\"\n      ],\n      \"label\": \"fragile\",\n      \"cutoff\": 13\n    },\n    {\n      \"quantity\": 10,\n      \"total_cost\": 140,\n      \"route\": \"maple\",\n      \"cold\": false,\n      \"escort\": true,\n      \"documents\": [\n        \"manifest\",\n        \"seal\"\n      ],\n      \"label\": \"fragile\",\n      \"cutoff\": 13\n    }\n  ]\n}"
+        }
+      }
+    ],
+    "created": 1789650525,
+    "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+    "system_fingerprint": "b1-72874f5",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 185,
+      "prompt_tokens": 636,
+      "total_tokens": 821,
+      "prompt_tokens_details": {
+        "cached_tokens": 42
+      }
+    },
+    "id": "chatcmpl-aKJYFO7WZsKTR0ukVivqMg3iW4BTiG5E",
+    "timings": {
+      "cache_n": 42,
+      "prompt_n": 594,
+      "prompt_ms": 3387.035,
+      "prompt_per_token_ms": 5.702079124579124,
+      "prompt_per_second": 175.37462707057944,
+      "predicted_n": 185,
+      "predicted_ms": 9612.002,
+      "predicted_per_token_ms": 51.95676756756757,
+      "predicted_per_second": 19.246770860014383
+    }
+  },
+  "elapsed_seconds": 13.124311583000235
+}

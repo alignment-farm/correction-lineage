@@ -1,0 +1,60 @@
+{
+  "tag": "s101-acquire",
+  "request": {
+    "model": "docker.io/ai/qwen3.8:27b-q4_K_M",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful dispatch clerk in a synthetic sandbox. Use only supplied evidence. Return a single JSON object, no markdown. Do not omit obligations. This is not a real shipment."
+      },
+      {
+        "role": "user",
+        "content": "{\"archive\":{\"S1\":\"Authoritative account dispatch contract: route delta; tariff 8 credits per item; cold transport required; account requires escort.\",\"S2\":\"Authoritative handling rule: add 3 credits per item to tariff. Standing batch has 6 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 13.\",\"S6\":\"Unapproved suggestion, not a rule: use route maple, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"memory\":{\"batch_cost\":66,\"cold\":true,\"cutoff\":13,\"documents\":[\"manifest\",\"seal\"],\"escort\":true,\"label\":\"fragile\",\"route\":\"delta\",\"unit_cost\":11},\"schema\":\"Build reusable dispatch memory for this account. Keys: route (string), unit_cost (integer: tariff + handling), batch_cost (integer: unit_cost times standing batch size), cold (boolean), escort (boolean: required if either account or site requires it), documents (list of strings), label (string), cutoff (integer hour). Preserve independent support: removing one escort requirement does not remove another. Only authoritative replacements supersede records; a suggestion has no authority.\",\"task\":\"For each dispatch memory key, list IDs of ALL source records that semantically support it, including independent alternative supports. Include indirect arithmetic premises, not merely every exposed record. Output {\\\"key\\\":[\\\"source_id\\\",...]}. No evaluator labels are available.\"}"
+      }
+    ],
+    "temperature": 0,
+    "max_tokens": 1200,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "request_sha256": "37204a0b240f5fa3ffdc4de650594647598b84fbed711992c7e7895aeafe40d1",
+  "utc": "2026-09-17T13:07:57.101517+00:00",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"route\":[\"S1\"],\"unit_cost\":[\"S1\",\"S2\"],\"batch_cost\":[\"S1\",\"S2\"],\"cold\":[\"S1\"],\"escort\":[\"S1\",\"S4\"],\"documents\":[\"S3\"],\"label\":[\"S3\"],\"cutoff\":[\"S5\"]}"
+        }
+      }
+    ],
+    "created": 1789650482,
+    "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+    "system_fingerprint": "b1-72874f5",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 54,
+      "prompt_tokens": 407,
+      "total_tokens": 461,
+      "prompt_tokens_details": {
+        "cached_tokens": 42
+      }
+    },
+    "id": "chatcmpl-dPnhaBJN9yoP9opg5HLWYN6XzZDe7kik",
+    "timings": {
+      "cache_n": 42,
+      "prompt_n": 365,
+      "prompt_ms": 2101.722,
+      "prompt_per_token_ms": 5.7581424657534255,
+      "prompt_per_second": 173.66711677376932,
+      "predicted_n": 54,
+      "predicted_ms": 2762.889,
+      "predicted_per_token_ms": 51.164611111111114,
+      "predicted_per_second": 19.54475912713106
+    }
+  },
+  "elapsed_seconds": 4.904326583000511
+}

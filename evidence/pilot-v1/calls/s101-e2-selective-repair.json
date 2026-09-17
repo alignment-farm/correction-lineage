@@ -1,0 +1,60 @@
+{
+  "tag": "s101-e2-selective-repair",
+  "request": {
+    "model": "docker.io/ai/qwen3.8:27b-q4_K_M",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful dispatch clerk in a synthetic sandbox. Use only supplied evidence. Return a single JSON object, no markdown. Do not omit obligations. This is not a real shipment."
+      },
+      {
+        "role": "user",
+        "content": "{\"corrections\":[{\"replace\":\"S1\",\"text\":\"Authoritative replacement of S1: route maple; tariff 11 credits per item; cold transport is not required; account no longer requires escort.\"},{\"replace\":\"S4\",\"text\":\"Authoritative replacement of S4: site no longer requires escort.\"}],\"current_archive\":{\"S1\":\"Authoritative replacement of S1: route maple; tariff 11 credits per item; cold transport is not required; account no longer requires escort.\",\"S2\":\"Authoritative handling rule: add 3 credits per item to tariff. Standing batch has 6 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative replacement of S4: site no longer requires escort.\",\"S5\":\"Authoritative receiving rule: cutoff hour 13.\",\"S6\":\"Unapproved suggestion, not a rule: use route maple, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"memory\":{\"batch_cost\":84,\"cold\":false,\"cutoff\":13,\"documents\":[\"manifest\",\"seal\"],\"escort\":true,\"label\":\"fragile\",\"route\":\"maple\",\"unit_cost\":14},\"original_archive\":{\"S1\":\"Authoritative account dispatch contract: route delta; tariff 8 credits per item; cold transport required; account requires escort.\",\"S2\":\"Authoritative handling rule: add 3 credits per item to tariff. Standing batch has 6 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 13.\",\"S6\":\"Unapproved suggestion, not a rule: use route maple, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"requested_keys\":[\"escort\"],\"task\":\"Build reusable dispatch memory for this account. Keys: route (string), unit_cost (integer: tariff + handling), batch_cost (integer: unit_cost times standing batch size), cold (boolean), escort (boolean: required if either account or site requires it), documents (list of strings), label (string), cutoff (integer hour). Preserve independent support: removing one escort requirement does not remove another. Only authoritative replacements supersede records; a suggestion has no authority. Recompute exactly the requested keys from current authoritative evidence. Return only those key/value pairs. Check arithmetic and retain independently supported requirements.\"}"
+      }
+    ],
+    "temperature": 0,
+    "max_tokens": 1200,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "request_sha256": "355cc33872ca2cb3b7ef7ff231ba85ff5f0141dcc36ba4b9d9e9a0ec70198e5a",
+  "utc": "2026-09-17T13:09:38.699867+00:00",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"escort\":false}"
+        }
+      }
+    ],
+    "created": 1789650582,
+    "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+    "system_fingerprint": "b1-72874f5",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 6,
+      "prompt_tokens": 615,
+      "total_tokens": 621,
+      "prompt_tokens_details": {
+        "cached_tokens": 42
+      }
+    },
+    "id": "chatcmpl-HnQ44jDe4nX572BlNmKqVcB7LX4KowVs",
+    "timings": {
+      "cache_n": 42,
+      "prompt_n": 573,
+      "prompt_ms": 3537.414,
+      "prompt_per_token_ms": 6.173497382198954,
+      "prompt_per_second": 161.98273654143958,
+      "predicted_n": 6,
+      "predicted_ms": 484.452,
+      "predicted_per_token_ms": 80.742,
+      "predicted_per_second": 12.385127938371603
+    }
+  },
+  "elapsed_seconds": 4.124956499999826
+}

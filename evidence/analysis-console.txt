@@ -1,0 +1,200 @@
+{
+  "pilot-v1": {
+    "summary": {
+      "selective": {
+        "episodes": 2,
+        "complete": 2,
+        "state_complete": 2,
+        "fresh_complete": 2,
+        "unaffected_complete": 2,
+        "selected_fields": 6,
+        "deployment_cost": {
+          "calls": 8,
+          "prompt_tokens": 4030,
+          "completion_tokens": 496,
+          "elapsed_seconds": 54.768519709999964
+        }
+      },
+      "exposure": {
+        "episodes": 2,
+        "complete": 2,
+        "state_complete": 2,
+        "fresh_complete": 2,
+        "unaffected_complete": 2,
+        "selected_fields": 16,
+        "deployment_cost": {
+          "calls": 5,
+          "prompt_tokens": 2844,
+          "completion_tokens": 352,
+          "elapsed_seconds": 59.555808749997595
+        }
+      },
+      "reconstruct": {
+        "episodes": 2,
+        "complete": 2,
+        "state_complete": 2,
+        "fresh_complete": 2,
+        "unaffected_complete": 2,
+        "selected_fields": 16,
+        "deployment_cost": {
+          "calls": 7,
+          "prompt_tokens": 4134,
+          "completion_tokens": 494,
+          "elapsed_seconds": 64.99455095899793
+        }
+      },
+      "rebuild": {
+        "episodes": 2,
+        "complete": 2,
+        "state_complete": 2,
+        "fresh_complete": 2,
+        "unaffected_complete": 2,
+        "selected_fields": 16,
+        "deployment_cost": {
+          "calls": 5,
+          "prompt_tokens": 2755,
+          "completion_tokens": 488,
+          "elapsed_seconds": 50.47586833300193
+        }
+      }
+    },
+    "research_unique_calls": 22,
+    "research_tokens": 14414,
+    "stages": {
+      "maintain": {
+        "calls": 2,
+        "prompt_tokens": 803,
+        "completion_tokens": 51,
+        "seconds": 7.4819280419997085
+      },
+      "write": {
+        "calls": 1,
+        "prompt_tokens": 309,
+        "completion_tokens": 84,
+        "seconds": 6.525406875000044
+      },
+      "acquire": {
+        "calls": 1,
+        "prompt_tokens": 407,
+        "completion_tokens": 54,
+        "seconds": 4.904326583000511
+      },
+      "repair": {
+        "calls": 8,
+        "prompt_tokens": 4851,
+        "completion_tokens": 343,
+        "seconds": 61.995543459001055
+      },
+      "reconstruct": {
+        "calls": 2,
+        "prompt_tokens": 1290,
+        "completion_tokens": 46,
+        "seconds": 11.188990916998591
+      },
+      "use": {
+        "calls": 8,
+        "prompt_tokens": 5176,
+        "completion_tokens": 1000,
+        "seconds": 118.12233125099738
+      }
+    },
+    "maintenance_diagnostic": [
+      {
+        "tag": "s101-e1-selective-maintain",
+        "route_links": [
+          "S1",
+          "S6"
+        ],
+        "nonauthoritative_route_link": true
+      },
+      {
+        "tag": "s101-e2-selective-maintain",
+        "route_links": null,
+        "nonauthoritative_route_link": false
+      }
+    ],
+    "lifetime_horizons": {
+      "selective": {
+        "0": {
+          "calls": 2,
+          "tokens": 854
+        },
+        "1": {
+          "calls": 5,
+          "tokens": 2751
+        },
+        "2": {
+          "calls": 8,
+          "tokens": 4526
+        }
+      },
+      "exposure": {
+        "0": {
+          "calls": 1,
+          "tokens": 393
+        },
+        "1": {
+          "calls": 3,
+          "tokens": 1772
+        },
+        "2": {
+          "calls": 5,
+          "tokens": 3196
+        }
+      },
+      "reconstruct": {
+        "0": {
+          "calls": 1,
+          "tokens": 393
+        },
+        "1": {
+          "calls": 4,
+          "tokens": 2533
+        },
+        "2": {
+          "calls": 7,
+          "tokens": 4628
+        }
+      },
+      "rebuild": {
+        "0": {
+          "calls": 1,
+          "tokens": 393
+        },
+        "1": {
+          "calls": 3,
+          "tokens": 1864
+        },
+        "2": {
+          "calls": 5,
+          "tokens": 3243
+        }
+      }
+    },
+    "acquisition": {
+      "instances": 1,
+      "tp": 11,
+      "fp": 0,
+      "fn": 0,
+      "initial_complete": 1
+    },
+    "observed_run_span_seconds": 210.24034714698792,
+    "failures": []
+  },
+  "integrity": {
+    "verified_requests": 22,
+    "resolved_model_identities": [
+      [
+        "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+        "b1-72874f5"
+      ]
+    ],
+    "checks": [
+      "request hashes",
+      "no gold fixture keys in requests",
+      "no truncated completions",
+      "offline rescore",
+      "single resolved model and server fingerprint"
+    ]
+  }
+}
