@@ -46,3 +46,11 @@ Pinned primary HTML and copied metadata are in `sources/` with hashes and source
 provenance. `scripts/prepare.py` downloads versioned HTML; it does not issue arXiv
 metadata requests. Copied metadata originated in the root's cached, rate-limited
 query API retrieval, recorded in `sources/retrieval.json`.
+
+The separate read-wording diagnostic is frozen in
+`methods/read-diagnostic-v1.md`. Run `uv run --python 3.12
+scripts/read_diagnostic.py` to resume its exact recorded calls. It writes to
+`evidence/read-diagnostic-v1`; use a fresh checkout without that output directory
+for independent responses. Its eight calls are research diagnosis, not costs
+charged to any original deployment arm. After all runs, `scripts/analyze.py`
+regenerates the ledger and `scripts/report.py` regenerates `RESULTS.md`.

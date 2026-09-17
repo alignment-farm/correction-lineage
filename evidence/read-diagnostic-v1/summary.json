@@ -1,0 +1,18 @@
+{
+  "arms": {
+    "original": {
+      "instances": 2,
+      "fresh_complete": 1
+    },
+    "explicit": {
+      "instances": 2,
+      "fresh_complete": 2
+    }
+  },
+  "research_cost": {
+    "calls": 8,
+    "prompt_tokens": 4339,
+    "completion_tokens": 882,
+    "elapsed_seconds": 102.6793324149985
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "tag": "s419-e1-selective-repair",
+  "request": {
+    "model": "docker.io/ai/qwen3.8:27b-q4_K_M",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful dispatch clerk in a synthetic sandbox. Use only supplied evidence. Return a single JSON object, no markdown. Do not omit obligations. This is not a real shipment."
+      },
+      {
+        "role": "user",
+        "content": "{\"corrections\":[{\"replace\":\"S1\",\"text\":\"Authoritative replacement of S1: route maple; tariff 10 credits per item; cold transport is not required; account no longer requires escort.\"}],\"current_archive\":{\"S1\":\"Authoritative replacement of S1: route maple; tariff 10 credits per item; cold transport is not required; account no longer requires escort.\",\"S2\":\"Authoritative handling rule: add 2 credits per item to tariff. Standing batch has 5 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 15.\",\"S6\":\"Unapproved suggestion, not a rule: use route maple, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"memory\":{\"batch_cost\":45,\"cold\":true,\"cutoff\":15,\"documents\":[\"manifest\",\"seal\"],\"escort\":true,\"label\":\"fragile\",\"route\":\"delta\",\"unit_cost\":9},\"original_archive\":{\"S1\":\"Authoritative account dispatch contract: route delta; tariff 7 credits per item; cold transport required; account requires escort.\",\"S2\":\"Authoritative handling rule: add 2 credits per item to tariff. Standing batch has 5 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 15.\",\"S6\":\"Unapproved suggestion, not a rule: use route maple, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"requested_keys\":[\"route\",\"unit_cost\",\"batch_cost\",\"cold\",\"escort\"],\"task\":\"Build reusable dispatch memory for this account. Keys: route (string), unit_cost (integer: tariff + handling), batch_cost (integer: unit_cost times standing batch size), cold (boolean), escort (boolean: required if either account or site requires it), documents (list of strings), label (string), cutoff (integer hour). Preserve independent support: removing one escort requirement does not remove another. Only authoritative replacements supersede records; a suggestion has no authority. Recompute exactly the requested keys from current authoritative evidence. Return only those key/value pairs. Check arithmetic and retain independently supported requirements.\"}"
+      }
+    ],
+    "temperature": 0,
+    "max_tokens": 1200,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "request_sha256": "27eb3f17e1048759a78818c81673f9b5073dc9708a8f55b7723ae424f7a221fc",
+  "utc": "2026-09-17T13:23:10.729094+00:00",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"route\": \"maple\",\n  \"unit_cost\": 12,\n  \"batch_cost\": 60,\n  \"cold\": false,\n  \"escort\": true\n}"
+        }
+      }
+    ],
+    "created": 1789651398,
+    "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+    "system_fingerprint": "b1-72874f5",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_tokens": 601,
+      "total_tokens": 647,
+      "prompt_tokens_details": {
+        "cached_tokens": 42
+      }
+    },
+    "id": "chatcmpl-gQGzh8JcQrIeKaQx3r5rMFTCSXoAOxl0",
+    "timings": {
+      "cache_n": 42,
+      "prompt_n": 559,
+      "prompt_ms": 3523.691,
+      "prompt_per_token_ms": 6.303561717352415,
+      "prompt_per_second": 158.6404710288161,
+      "predicted_n": 46,
+      "predicted_ms": 4368.132,
+      "predicted_per_token_ms": 94.95939130434782,
+      "predicted_per_second": 10.53081729215143
+    }
+  },
+  "elapsed_seconds": 7.970745500000703
+}

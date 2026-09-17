@@ -1,0 +1,8 @@
+s523-write 393 6.24
+s523-rebuild 650 8.03
+s523-original 819 13.08
+s523-explicit 742 8.01
+s631-write 394 6.11
+s631-rebuild 654 16.25
+s631-explicit 746 13.5
+s631-original 823 31.47

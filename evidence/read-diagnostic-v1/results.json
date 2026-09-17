@@ -1,0 +1,366 @@
+[
+  {
+    "seed": 523,
+    "arm": "original",
+    "initial": {
+      "route": "amber",
+      "unit_cost": 13,
+      "batch_cost": 52,
+      "cold": true,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 16
+    },
+    "initial_complete": true,
+    "state": {
+      "route": "maple",
+      "unit_cost": 16,
+      "batch_cost": 64,
+      "cold": false,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 16
+    },
+    "state_complete": true,
+    "output": {
+      "orders": [
+        {
+          "quantity": 5,
+          "total_cost": 80,
+          "route": "maple",
+          "cold": false,
+          "escort": true,
+          "documents": [
+            "manifest",
+            "seal"
+          ],
+          "label": "fragile",
+          "cutoff": 16
+        },
+        {
+          "quantity": 8,
+          "total_cost": 128,
+          "route": "maple",
+          "cold": false,
+          "escort": true,
+          "documents": [
+            "manifest",
+            "seal"
+          ],
+          "label": "fragile",
+          "cutoff": 16
+        }
+      ]
+    },
+    "expected": [
+      {
+        "quantity": 5,
+        "total_cost": 80,
+        "route": "maple",
+        "cold": false,
+        "escort": true,
+        "documents": [
+          "manifest",
+          "seal"
+        ],
+        "label": "fragile",
+        "cutoff": 16
+      },
+      {
+        "quantity": 8,
+        "total_cost": 128,
+        "route": "maple",
+        "cold": false,
+        "escort": true,
+        "documents": [
+          "manifest",
+          "seal"
+        ],
+        "label": "fragile",
+        "cutoff": 16
+      }
+    ],
+    "fresh_complete": true
+  },
+  {
+    "seed": 523,
+    "arm": "explicit",
+    "initial": {
+      "route": "amber",
+      "unit_cost": 13,
+      "batch_cost": 52,
+      "cold": true,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 16
+    },
+    "initial_complete": true,
+    "state": {
+      "route": "maple",
+      "unit_cost": 16,
+      "batch_cost": 64,
+      "cold": false,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 16
+    },
+    "state_complete": true,
+    "output": {
+      "orders": [
+        {
+          "quantity": 5,
+          "total_cost": 80,
+          "route": "maple",
+          "cold": false,
+          "escort": true,
+          "documents": [
+            "manifest",
+            "seal"
+          ],
+          "label": "fragile",
+          "cutoff": 16
+        },
+        {
+          "quantity": 8,
+          "total_cost": 128,
+          "route": "maple",
+          "cold": false,
+          "escort": true,
+          "documents": [
+            "manifest",
+            "seal"
+          ],
+          "label": "fragile",
+          "cutoff": 16
+        }
+      ]
+    },
+    "expected": [
+      {
+        "quantity": 5,
+        "total_cost": 80,
+        "route": "maple",
+        "cold": false,
+        "escort": true,
+        "documents": [
+          "manifest",
+          "seal"
+        ],
+        "label": "fragile",
+        "cutoff": 16
+      },
+      {
+        "quantity": 8,
+        "total_cost": 128,
+        "route": "maple",
+        "cold": false,
+        "escort": true,
+        "documents": [
+          "manifest",
+          "seal"
+        ],
+        "label": "fragile",
+        "cutoff": 16
+      }
+    ],
+    "fresh_complete": true
+  },
+  {
+    "seed": 631,
+    "arm": "explicit",
+    "initial": {
+      "route": "delta",
+      "unit_cost": 12,
+      "batch_cost": 48,
+      "cold": true,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 14
+    },
+    "initial_complete": true,
+    "state": {
+      "route": "birch",
+      "unit_cost": 15,
+      "batch_cost": 60,
+      "cold": false,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 14
+    },
+    "state_complete": true,
+    "output": {
+      "orders": [
+        {
+          "quantity": 5,
+          "total_cost": 75,
+          "route": "birch",
+          "cold": false,
+          "escort": true,
+          "documents": [
+            "manifest",
+            "seal"
+          ],
+          "label": "fragile",
+          "cutoff": 14
+        },
+        {
+          "quantity": 8,
+          "total_cost": 120,
+          "route": "birch",
+          "cold": false,
+          "escort": true,
+          "documents": [
+            "manifest",
+            "seal"
+          ],
+          "label": "fragile",
+          "cutoff": 14
+        }
+      ]
+    },
+    "expected": [
+      {
+        "quantity": 5,
+        "total_cost": 75,
+        "route": "birch",
+        "cold": false,
+        "escort": true,
+        "documents": [
+          "manifest",
+          "seal"
+        ],
+        "label": "fragile",
+        "cutoff": 14
+      },
+      {
+        "quantity": 8,
+        "total_cost": 120,
+        "route": "birch",
+        "cold": false,
+        "escort": true,
+        "documents": [
+          "manifest",
+          "seal"
+        ],
+        "label": "fragile",
+        "cutoff": 14
+      }
+    ],
+    "fresh_complete": true
+  },
+  {
+    "seed": 631,
+    "arm": "original",
+    "initial": {
+      "route": "delta",
+      "unit_cost": 12,
+      "batch_cost": 48,
+      "cold": true,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 14
+    },
+    "initial_complete": true,
+    "state": {
+      "route": "birch",
+      "unit_cost": 15,
+      "batch_cost": 60,
+      "cold": false,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 14
+    },
+    "state_complete": true,
+    "output": {
+      "orders": [
+        {
+          "quantity": 5,
+          "total_cost": 90,
+          "route": "birch",
+          "cold": false,
+          "escort": true,
+          "documents": [
+            "manifest",
+            "seal"
+          ],
+          "label": "fragile",
+          "cutoff": 14
+        },
+        {
+          "quantity": 8,
+          "total_cost": 144,
+          "route": "birch",
+          "cold": false,
+          "escort": true,
+          "documents": [
+            "manifest",
+            "seal"
+          ],
+          "label": "fragile",
+          "cutoff": 14
+        }
+      ]
+    },
+    "expected": [
+      {
+        "quantity": 5,
+        "total_cost": 75,
+        "route": "birch",
+        "cold": false,
+        "escort": true,
+        "documents": [
+          "manifest",
+          "seal"
+        ],
+        "label": "fragile",
+        "cutoff": 14
+      },
+      {
+        "quantity": 8,
+        "total_cost": 120,
+        "route": "birch",
+        "cold": false,
+        "escort": true,
+        "documents": [
+          "manifest",
+          "seal"
+        ],
+        "label": "fragile",
+        "cutoff": 14
+      }
+    ],
+    "fresh_complete": false
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "tag": "s307-e1-reconstruct-reconstruct",
+  "request": {
+    "model": "docker.io/ai/qwen3.8:27b-q4_K_M",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful dispatch clerk in a synthetic sandbox. Use only supplied evidence. Return a single JSON object, no markdown. Do not omit obligations. This is not a real shipment."
+      },
+      {
+        "role": "user",
+        "content": "{\"corrections\":[{\"replace\":\"S1\",\"text\":\"Authoritative replacement of S1: route indigo; tariff 12 credits per item; cold transport is not required; account no longer requires escort.\"}],\"current_archive\":{\"S1\":\"Authoritative replacement of S1: route indigo; tariff 12 credits per item; cold transport is not required; account no longer requires escort.\",\"S2\":\"Authoritative handling rule: add 3 credits per item to tariff. Standing batch has 7 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 16.\",\"S6\":\"Unapproved suggestion, not a rule: use route indigo, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"latest_correction\":{\"replace\":\"S1\",\"text\":\"Authoritative replacement of S1: route indigo; tariff 12 credits per item; cold transport is not required; account no longer requires escort.\"},\"memory\":{\"batch_cost\":84,\"cold\":true,\"cutoff\":16,\"documents\":[\"manifest\",\"seal\"],\"escort\":true,\"label\":\"fragile\",\"route\":\"cedar\",\"unit_cost\":12},\"original_archive\":{\"S1\":\"Authoritative account dispatch contract: route cedar; tariff 9 credits per item; cold transport required; account requires escort.\",\"S2\":\"Authoritative handling rule: add 3 credits per item to tariff. Standing batch has 7 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 16.\",\"S6\":\"Unapproved suggestion, not a rule: use route indigo, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"schema\":\"Build reusable dispatch memory for this account. Keys: route (string), unit_cost (integer: tariff + handling), batch_cost (integer: unit_cost times standing batch size), cold (boolean), escort (boolean: required if either account or site requires it), documents (list of strings), label (string), cutoff (integer hour). Preserve independent support: removing one escort requirement does not remove another. Only authoritative replacements supersede records; a suggestion has no authority.\",\"task\":\"Identify every memory key whose value OR supporting evidence may be affected by the authoritative replacement. Include indirect dependencies and independently supported values that require checking. Output {\\\"targets\\\":[keys]}.\"}"
+      }
+    ],
+    "temperature": 0,
+    "max_tokens": 1200,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "request_sha256": "aaffe2d4cc65da831eaae0e58bd4199548e0a837c8c37ad857af5edbc31103f2",
+  "utc": "2026-09-17T13:18:28.789791+00:00",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"targets\":[\"route\",\"unit_cost\",\"batch_cost\",\"cold\",\"escort\",\"documents\",\"label\",\"cutoff\"]}"
+        }
+      }
+    ],
+    "created": 1789651115,
+    "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+    "system_fingerprint": "b1-72874f5",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 648,
+      "total_tokens": 671,
+      "prompt_tokens_details": {
+        "cached_tokens": 42
+      }
+    },
+    "id": "chatcmpl-06TuYe9SqorWIy5aRtocLdy35HeMaLgD",
+    "timings": {
+      "cache_n": 42,
+      "prompt_n": 606,
+      "prompt_ms": 3672.052,
+      "prompt_per_token_ms": 6.059491749174918,
+      "prompt_per_second": 165.03034270756515,
+      "predicted_n": 23,
+      "predicted_ms": 2818.097,
+      "predicted_per_token_ms": 122.52595652173913,
+      "predicted_per_second": 8.161535958485459
+    }
+  },
+  "elapsed_seconds": 6.645493083000474
+}

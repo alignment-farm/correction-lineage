@@ -1,0 +1,6 @@
+{
+  "python": "3.12.14",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "uv": "uv 0.12.13 (0ebbd9274 2026-09-10 aarch64-apple-darwin)",
+  "dependencies": "Python standard library only"
+}

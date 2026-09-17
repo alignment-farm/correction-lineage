@@ -21,3 +21,15 @@ At this point reconstruction conservatively selected all eight fields for the
 first correction. That is allowed: the baseline may choose broad audit/repair.
 Cost conclusions must use observed calls and tokens rather than equating fewer
 selected keys with less complete work.
+
+## Primary fresh assessment (after execution)
+
+Initial acquisition again covered all candidate-support edges: 33/33, with no
+spurious initial links. The S6 maintenance error recurred on seed 211 but not
+307 or 419. All arms repaired all persistent fields correctly. All arms failed
+event-1 later-order cost calculations on seeds 211 and 307; byte-identical use
+requests produced identical erroneous results. Seed 211 charged 17 instead of
+15 per item; seed 307 charged 18 instead of 15. Both are consistent with adding
+handling a second time, but that explanation is an inference. No repair method
+gets credit for complete success on those episodes. The separately frozen
+read-diagnostic-v1 tests wording on new seeds, without revising primary results.

@@ -1,7 +1,26 @@
 # Acquired correction lineage
 
 Prepared 17 September 2026 as an independent Construct-2 ancillary study.
-**Status: bounded investigation commissioned; no experiments started by preparation.**
+**Status: bounded feasibility experiments completed on 17 September 2026.**
+
+## Local experimental abstract
+
+A fixed Qwen3.8 27B model acquired usable support links on one pilot and three
+prespecified fresh dispatch instances. All four methods—selective lineage,
+conservative exposure repair, correction-time reconstruction, and full rebuilding—
+repaired all persistent fields in 6/6 fresh episodes. All achieved complete state
+and later-task success in 4/6: shared read-time arithmetic errors caused the other
+two failures. Selective lineage recomputed 18 rather than 48 fields, but used
+13,613 tokens versus rebuilding’s 9,789 (39.1% more), including ordinary writes,
+acquisition, maintenance, repair and audited use. It narrowly beat reconstruction
+over two corrections, while rebuilding remained cheaper. An unsupported
+maintenance link recurred on 1/3 fresh instances despite perfect initial link
+coverage. These are bounded synthetic observations, not a general lineage ranking.
+
+[Results and limitations](RESULTS.md) · [Frozen protocol](methods/protocol-v1.md) ·
+[Evidence and cost ledger](evidence/analysis.json) · [Reproduction](REPRODUCE.md).
+The original commission and CL1–CL3 below are preserved. Preparation itself ran
+no experiments; execution was authorized in the subsequent assigned session.
 
 ## Question
 

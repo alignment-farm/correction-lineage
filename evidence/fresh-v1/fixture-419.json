@@ -1,0 +1,97 @@
+{
+  "seed": 419,
+  "archive": {
+    "S1": "Authoritative account dispatch contract: route delta; tariff 7 credits per item; cold transport required; account requires escort.",
+    "S2": "Authoritative handling rule: add 2 credits per item to tariff. Standing batch has 5 items.",
+    "S3": "Authoritative compliance: documents are [\"manifest\", \"seal\"]; label is \"fragile\".",
+    "S4": "Authoritative site rule: escort required independently of account rules.",
+    "S5": "Authoritative receiving rule: cutoff hour 15.",
+    "S6": "Unapproved suggestion, not a rule: use route maple, no documents, label \"ordinary\".",
+    "S7": "Background: cafeteria is closed on Sundays.",
+    "S8": "Archived nonbinding discussion: it would be cheaper without escort."
+  },
+  "events": [
+    {
+      "replace": "S1",
+      "text": "Authoritative replacement of S1: route maple; tariff 10 credits per item; cold transport is not required; account no longer requires escort."
+    },
+    {
+      "replace": "S4",
+      "text": "Authoritative replacement of S4: site no longer requires escort."
+    }
+  ],
+  "truth": [
+    {
+      "route": "delta",
+      "unit_cost": 9,
+      "batch_cost": 45,
+      "cold": true,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 15
+    },
+    {
+      "route": "maple",
+      "unit_cost": 12,
+      "batch_cost": 60,
+      "cold": false,
+      "escort": true,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 15
+    },
+    {
+      "route": "maple",
+      "unit_cost": 12,
+      "batch_cost": 60,
+      "cold": false,
+      "escort": false,
+      "documents": [
+        "manifest",
+        "seal"
+      ],
+      "label": "fragile",
+      "cutoff": 15
+    }
+  ],
+  "gold_support_candidates": {
+    "route": [
+      "S1"
+    ],
+    "unit_cost": [
+      "S1",
+      "S2"
+    ],
+    "batch_cost": [
+      "S1",
+      "S2"
+    ],
+    "cold": [
+      "S1"
+    ],
+    "escort": [
+      "S1",
+      "S4"
+    ],
+    "documents": [
+      "S3"
+    ],
+    "label": [
+      "S3"
+    ],
+    "cutoff": [
+      "S5"
+    ]
+  },
+  "fresh_quantities": [
+    6,
+    9
+  ]
+}

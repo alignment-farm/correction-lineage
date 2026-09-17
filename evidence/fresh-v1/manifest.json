@@ -1,0 +1,18 @@
+{
+  "revision": "71c653fe6ceba5a4b565eae16ec63cae836dc3b8",
+  "script_sha256": "e44e9c8c645783a8cf81294fa45c1176f499820298bcc663bf39b57d42c395f2",
+  "model_alias": "docker.io/ai/qwen3.8:27b-q4_K_M",
+  "endpoint": "https://mac-studio-7hr7.taile71f88.ts.net/engines/v1/chat/completions",
+  "seeds": [
+    211,
+    307,
+    419
+  ],
+  "phase": "fresh",
+  "settings": {
+    "temperature": 0,
+    "max_tokens": 1200,
+    "thinking": false
+  },
+  "note": "Sequential requests; no latency speedup inference; immutable model identity checked in responses."
+}

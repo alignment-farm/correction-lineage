@@ -1,0 +1,146 @@
+{
+  "initial": {
+    "route": "cedar",
+    "unit_cost": 12,
+    "batch_cost": 84,
+    "cold": true,
+    "escort": true,
+    "documents": [
+      "manifest",
+      "seal"
+    ],
+    "label": "fragile",
+    "cutoff": 16
+  },
+  "initial_score": {
+    "route": true,
+    "unit_cost": true,
+    "batch_cost": true,
+    "cold": true,
+    "escort": true,
+    "documents": true,
+    "label": true,
+    "cutoff": true
+  },
+  "schema_valid": true,
+  "graph": {
+    "route": [
+      "S1"
+    ],
+    "unit_cost": [
+      "S1",
+      "S2"
+    ],
+    "batch_cost": [
+      "S1",
+      "S2"
+    ],
+    "cold": [
+      "S1"
+    ],
+    "escort": [
+      "S1",
+      "S4"
+    ],
+    "documents": [
+      "S3"
+    ],
+    "label": [
+      "S3"
+    ],
+    "cutoff": [
+      "S5"
+    ]
+  },
+  "graph_score": {
+    "tp": 11,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "missing": [],
+    "spurious": []
+  },
+  "exposure": {
+    "route": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "unit_cost": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "batch_cost": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "cold": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "escort": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "documents": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "label": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "cutoff": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "tag": "s631-write",
+  "request": {
+    "model": "docker.io/ai/qwen3.8:27b-q4_K_M",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful dispatch clerk in a synthetic sandbox. Use only supplied evidence. Return a single JSON object, no markdown. Do not omit obligations. This is not a real shipment."
+      },
+      {
+        "role": "user",
+        "content": "{\"archive\":{\"S1\":\"Authoritative account dispatch contract: route delta; tariff 9 credits per item; cold transport required; account requires escort.\",\"S2\":\"Authoritative handling rule: add 3 credits per item to tariff. Standing batch has 4 items.\",\"S3\":\"Authoritative compliance: documents are [\\\"manifest\\\", \\\"seal\\\"]; label is \\\"fragile\\\".\",\"S4\":\"Authoritative site rule: escort required independently of account rules.\",\"S5\":\"Authoritative receiving rule: cutoff hour 14.\",\"S6\":\"Unapproved suggestion, not a rule: use route birch, no documents, label \\\"ordinary\\\".\",\"S7\":\"Background: cafeteria is closed on Sundays.\",\"S8\":\"Archived nonbinding discussion: it would be cheaper without escort.\"},\"task\":\"Build reusable dispatch memory for this account. Keys: route (string), unit_cost (integer: tariff + handling), batch_cost (integer: unit_cost times standing batch size), cold (boolean), escort (boolean: required if either account or site requires it), documents (list of strings), label (string), cutoff (integer hour). Preserve independent support: removing one escort requirement does not remove another. Only authoritative replacements supersede records; a suggestion has no authority.\"}"
+      }
+    ],
+    "temperature": 0,
+    "max_tokens": 1200,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "request_sha256": "f72c6703f07d6222d0682cb03851f8098ea713804489105ff9f7857a11de2868",
+  "utc": "2026-09-17T13:27:03.747262+00:00",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"route\": \"delta\",\n  \"unit_cost\": 12,\n  \"batch_cost\": 48,\n  \"cold\": true,\n  \"escort\": true,\n  \"documents\": [\n    \"manifest\",\n    \"seal\"\n  ],\n  \"label\": \"fragile\",\n  \"cutoff\": 14\n}"
+        }
+      }
+    ],
+    "created": 1789651629,
+    "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+    "system_fingerprint": "b1-72874f5",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 310,
+      "total_tokens": 394,
+      "prompt_tokens_details": {
+        "cached_tokens": 42
+      }
+    },
+    "id": "chatcmpl-wnLzVZbtDJmWsrBFuILCekBX7ZwJgk8Y",
+    "timings": {
+      "cache_n": 42,
+      "prompt_n": 268,
+      "prompt_ms": 1659.837,
+      "prompt_per_token_ms": 6.193421641791045,
+      "prompt_per_second": 161.46163749813988,
+      "predicted_n": 84,
+      "predicted_ms": 4368.065,
+      "predicted_per_token_ms": 52.00077380952381,
+      "predicted_per_second": 19.23048306286651
+    }
+  },
+  "elapsed_seconds": 6.110628833001101
+}
